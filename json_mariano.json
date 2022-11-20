@@ -1,0 +1,11 @@
+{
+    "nombre": "Mariano",
+    "apellido": "Andolina",
+    "edad": 39,
+    "prendas": [
+        {
+            "zapatillas": 4,
+            "remeras": 16
+        }
+    ]
+}

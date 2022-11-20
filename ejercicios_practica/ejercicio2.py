@@ -46,4 +46,45 @@ if __name__ == '__main__':
     # y verifique si los primeros usuarios (mirando la página a ojo)
     # los datos recolectados son correctos.
 
+
+    response = requests.get('https://jsonplaceholder.typicode.com/todos') 
+    data = response.json()
+    
+
+    userid_1 = 0
+    userid_2 = 0
+    userid_3 = 0
+    userid_4 = 0
+    userid_5 = 0
+    userid_6 = 0
+    userid_7 = 0
+    userid_8 = 0
+    userid_9 = 0
+    userid_10 = 0
+
+    # print(data)
+
+    for user in data:
+        if user["userId"] == 1 and user["completed"] == True:
+            userid_1 += 1
+        if user["userId"] == 2 and user["completed"] == True:
+            userid_2 += 1
+        if user["userId"] == 3 and user["completed"] == True:
+            userid_3 += 1
+        if user["userId"] == 4 and user["completed"] == True:
+            userid_4 += 1
+        if user["userId"] == 5 and user["completed"] == True:
+            userid_5 += 1
+        if user["userId"] == 6 and user["completed"] == True:
+            userid_6 += 1
+        if user["userId"] == 7 and user["completed"] == True:
+            userid_7 += 1
+        if user["userId"] == 8 and user["completed"] == True:
+            userid_8 += 1
+        if user["userId"] == 9 and user["completed"] == True:
+            userid_9 += 1
+        if user["userId"] == 10 and user["completed"] == True:
+            userid_10 += 1
+
+    print(userid_1, userid_2, userid_3, userid_4, userid_5, userid_6, userid_7, userid_8, userid_9, userid_10)
     print("terminamos")
