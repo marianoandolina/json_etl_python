@@ -86,6 +86,28 @@ if __name__ == '__main__':
         if user["userId"] == 10 and user["completed"] == True:
             userid_10 += 1
 
-    print(userid_1, userid_2, userid_3, userid_4, userid_5, userid_6, userid_7, userid_8, userid_9, userid_10)
+print(f'''El UserId_1 completo {userid_1} titulos.\n El UserId_2 completo {userid_2} titulos.\n El UserId_3 completo {userid_3} titulos.\n
+El UserId_4 completo {userid_4} titulos.\n El UserId_5 completo {userid_5} titulos.\n El UserId_6 completo {userid_6} titulos.\n El UserId_7 completo {userid_7} titulos.\n
+El UserId_8 completo {userid_8} titulos.\n El UserId_9 completo {userid_9} titulos.\n El UserId_10 completo {userid_10} titulos.''')
     
-    print("terminamos")
+x = list(range(1, 11))
+y = [userid_1, userid_2, userid_3, userid_4, userid_5, userid_6, userid_7, userid_8, userid_9, userid_10]
+# print(x)
+# print(y)
+
+fig = plt.figure()
+ax = fig.add_subplot()
+
+ax.bar(x, y, color='c', label= 'Titulos completados')
+ax.set_facecolor('whitesmoke')
+ax.set_title('Users y titulos completados')
+ax.set_ylabel('Titulos completados')
+ax.set_xlabel('Users Ids')
+ax.grid(ls= 'dashed')
+ax.set_yticks(range(0, 14,1))
+ax.legend()
+
+plt.show()
+
+print("terminamos")
+    
